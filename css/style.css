@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    height: 110px;
+    background-color: black;
+    margin-top: 0.2rem;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nega {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu { 
+    font-size: 1.3rem;
+    display: flex;
+    margin-left: 370px;
+}
+
+.menu li {
+    padding: 12px 30px;
+}
+
+.login {
+    font-size: 1.3rem;
+    margin-left: 210px;
+    
+}
+.sign-in {
+    color: white;
+    text-decoration: none;
+}
+.sign-up {
+    color: white;
+    text-decoration: none;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.img-logoNav {
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    margin-right: 90px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.background-img {
+    width: 1900px;
+    height: 700px;
+}
+
+.search {
+    width: 92%;
+    height: 250px;
+    border-radius: 20px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+}
+
+.search-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stadium-list {
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+.stadium {
+    width: 150px;
+    height: 130px;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+}
+.img01 {
+    background-color: red;
+}
+.img02 {
+    background-color: blue;
+}
+.img03 {
+    background-color: yellow;
+}
+.img04 {
+    background-color: green;
+}
+.img05 {
+    background-color: orange;
+}
+.img06 {
+    background-color: purple;
+}
+
+.view-all a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    border: 2px solid black;
+
+}
+
+.hightlight-stadium {
+    width: 100%;
+    height: 3000px;
+    background-color: red;
+
+}
