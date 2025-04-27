@@ -10,11 +10,11 @@
 
 <body>
     <nav>
-        <div class="nega">
+        <div class="top">
             <ul>
                 <div class="img-nav">
                     <li>
-                        <img src="" alt="">
+                        <img class="logo" src="" alt="">
                     </li>
                 </div>
                 <div class="menu">
@@ -28,7 +28,7 @@
                 </div>
             </ul>
             <div class="img-logoNav">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlGMiz-bTzI8v4n6o6fetDOKa-p6AteCN1A&s" alt="">
+                <img class="logoVN" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlGMiz-bTzI8v4n6o6fetDOKa-p6AteCN1A&s" alt="">
             </div>
         </div>
     </nav>
@@ -43,9 +43,18 @@
                 <h1>Đặt sân thể thao ngay bây giờ</h1>
                 <p>Tìm kiếm sân chơi thể thao, thi đấu khắp Hà Nội</p>
                 <div class="search-input">
-                    <input type="text" placeholder="">
-                    <input type="text" placeholder="">
-                    <input type="text" placeholder="">
+                    <select id="stadiumType" required>
+                        <option value="">Chọn loại sân</option>
+                        <option value="5vs5">Sân 5vs5</option>
+                        <option value="7vs7">Sân 7vs7</option>
+                        <option value="11vs11">Sân 11vs11</option>
+                    </select>
+                    <select id="district" disabled required>
+                        <option value="" disabled selected>Chọn quận</option>
+                    </select>
+                    <select id="ward" disabled required>
+                        <option value="" disabled selected>Chọn huyện</option>
+                    </select>
                     <button type="submit">Tìm kiếm ngay</button>
                 </div>
             </div>
@@ -223,11 +232,14 @@
             <div class="hightlight-stadium">
                 <h9>Các sân nổi bật</h9>
                 <div>
-
+                    
                 </div>
             </div>
         </div>
     </main>
+
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
