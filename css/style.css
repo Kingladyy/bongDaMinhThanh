@@ -333,6 +333,22 @@ body {
     color: #666;
 }
 
+.view-all {
+    text-decoration: none;
+    color: blue;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.view-all:hover {
+    background-color: #0066ff;
+    color: white;
+}
+
+
 
 
 
