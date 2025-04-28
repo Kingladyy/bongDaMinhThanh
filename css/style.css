@@ -232,10 +232,10 @@ img::after {
     font-weight: 400;
 }
 
-.page2 {
+/* .page2 {
     max-width: 1200px;
     margin: 0 auto;
-}
+} */
 
 .stadium-listings {
     width: 92%;
@@ -392,12 +392,59 @@ img::after {
     border: 2px solid black;
 }
 
-.hightlight-stadium {
+.highlight-stadium {
     width: 100%;
-    height: 3000px;
-    background-color: red;
+    height: auto;
+    margin-top: 40px;
+    background-color:  l;
 }
 
+.highlight-text {
+    font-weight: bolder;
+    color: white;
+    font-size: 2.3rem;
+    margin-top: 15px;
+}
+
+.splide {
+    margin-top: 20px;
+}
+.highlight-skeleton {
+    display: flex;
+}
+.highlight-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.highlight-img:hover {
+    transform: scale(1.05);
+}
+
+.highlight-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 20px 16px 20px;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.1) 100%);
+    border-radius: 0 0 12px 12px;
+    z-index: 2;
+}
+
+.highlight-title, .highlight-location {
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
 /* .price-per-sqm {
     font-size: 14px;
     color: #666;

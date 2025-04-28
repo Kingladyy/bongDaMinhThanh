@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Exam</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 
 <body>
@@ -229,15 +230,87 @@
             <div class="view-all">
                 <a href="">Xem tất cả</a>
             </div>
-            <div class="hightlight-stadium">
-                <h9>Các sân nổi bật</h9>
-                <div>
-                    
+            <div class="highlight-stadium">
+                <div class="highlight-text">
+                    <h5>Các Sân Nổi Bật</h5>
+                </div>
+                <div id="highlight-splide" class="splide">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div class="highling-card">
+                                    <img class="highlight-img" src="https://www.sporta.vn/assets/default_venue_0-dc1f6687f619915230b62712508933a71a6e9529c390237b9766acc0d59539ab.webp" alt="sân1">
+                                    <div class="highlight-info">
+                                        <h4 class="highlight-title">Sân 1, khu đô thị Phúc La</h4>
+                                        <p class="highlight-location">168 P.Phúc La, Q.Hà Đông, Hà Nội</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="highling-card">
+                                    <img class="highlight-img" src="https://www.sporta.vn/assets/default_venue_0-dc1f6687f619915230b62712508933a71a6e9529c390237b9766acc0d59539ab.webp" alt="sân1">
+                                    <div class="highlight-info">
+                                        <h4 class="highlight-title">Sân 2, khu đô thị Phúc La</h4>
+                                        <p class="highlight-location">168 P.Phúc La, Q.Hà Đông, Hà Nội</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="highling-card">
+                                    <img class="highlight-img" src="https://www.sporta.vn/assets/default_venue_0-dc1f6687f619915230b62712508933a71a6e9529c390237b9766acc0d59539ab.webp" alt="sân1">
+                                    <div class="highlight-info">
+                                        <h4 class="highlight-title">Sân 3, khu đô thị Phúc La</h4>
+                                        <p class="highlight-location">168 P.Phúc La, Q.Hà Đông, Hà Nội</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="highling-card">
+                                    <img class="highlight-img" src="https://www.sporta.vn/assets/default_venue_0-dc1f6687f619915230b62712508933a71a6e9529c390237b9766acc0d59539ab.webp" alt="sân1">
+                                    <div class="highlight-info">
+                                        <h4 class="highlight-title">Sân 4, khu đô thị Phúc La</h4>
+                                        <p class="highlight-location">168 P.Phúc La, Q.Hà Đông, Hà Nội</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="highlight-card">
+                                    <img class="highlight-img" src="https://www.sporta.vn/assets/default_venue_0-dc1f6687f619915230b62712508933a71a6e9529c390237b9766acc0d59539ab.webp" alt="sân1">
+                                    <div class="highlight-info">
+                                        <h4 class="highlight-title">Sân 5, khu đô thị Phúc La</h4>
+                                        <p class="highlight-location">168 P.Phúc La, Q.Hà Đông, Hà Nội</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.4/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.getElementById('highlight-splide')) {
+                new Splide('#highlight-splide', {
+                    type: 'loop',
+                    perPage: 3,
+                    focus: 'center',
+                    drag: 'free',
+                    autoScroll: {
+                        speed: 1,
+                    },
+                    gap: '1.5rem',
+                    breakpoints: {
+                        900: { perPage: 2 },
+                        600: { perPage: 1 }
+                    }
+                }).mount(window.splide && window.splide.Extensions ? window.splide.Extensions : {});
+            }
+        });
+    </script>
 
     <script src="./js/main.js"></script>
 </body>
