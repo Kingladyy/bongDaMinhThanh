@@ -211,7 +211,7 @@ img::after {
     margin-right: 10px;
 }
 
-/* Style cho option đầu tiên (placeholder)
+ Style cho option đầu tiên (placeholder)
 .search-input select#stadiumType option:first-child,
 .search-input select#district option:first-child,
 .search-input select#ward option:first-child {
@@ -221,7 +221,7 @@ img::after {
     font-size: 1.2rem;
 } */
 
-/* Style cho các option còn lại */
+Style cho các option còn lại
 .search-input select#stadiumType option,
 .search-input select#district option,
 .search-input select#ward option {
@@ -455,7 +455,194 @@ img::after {
  /* .price-per-sqm {
     font-size: 14px;
     color: #666;
+<<<<<<< HEAD
+}
+
+.view-all {
+    /* text-decoration: none; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border: 2px solid black;
+    /* padding: 20px 30px; */
+    border-radius: 6px;
+    padding: 18px 40px;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    background-color: rgb(9, 75, 244);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+ .view-all-btn:hover {
+    /* background-color: rgb(10, 10, 10); */
+    color: white;
+    /* border: 2px solid white; */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer; */
+}   
+
+.news-feed {
+    width: 92%;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.new-feed-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.all-news {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.all-news a {
+    color: blue;
+    text-decoration: none;
+}
+
+.news-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.news-item-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.news-item-image-img {
+    width: 40%;
+    height: 50%;
+    position: relative;
+    border-radius: 10px;
+}
+.news-item-image-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+.i286 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.i286 i {
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+.i286 span {
+    font-size: 12px;
+}
+
+.khac {
+    /* position: absolute; */
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.khac a {
+    color: blue;
+    text-decoration: none;
+}
+
+.khac span {
+    color:#666;
+}
+.khac button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 440px;
+}
+.news-item-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.news-item-content {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #666;
+    width: 40%;
+    height: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.news-item-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.news-item-author-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 1 4px 0 rgba(0, 0, 0, 08);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.news-item-author-name {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.news-item-author-name span {
+    margin-right: 5px;
+    gap: 10px;
+}
+=======
 } */
+
+>>>>>>> 22c8249120d3931649364d7cd529d9697e4a46b7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
