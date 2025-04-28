@@ -6,7 +6,7 @@
 
 body {
     background-color: azure;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
 }
 
@@ -69,7 +69,7 @@ nav ul {
 }
 
 .logoVN {
-    width: 200px;
+    width: 170px;
     height: 100px;
     border-radius: 5px;
     margin-left: 40px;
@@ -77,7 +77,6 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    object-fit: cover;
 }
 
 .logoVN img {
@@ -90,6 +89,7 @@ img {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
+    object-fit: cover;
 }
 
 img::after {
@@ -324,7 +324,7 @@ Style cho các option còn lại
 .favorite-btn {
     background-color: transparent;
     border: none;
-    color: black    ;
+    color: black;
     font-size: 22px;
     cursor: pointer;
 }
@@ -384,6 +384,10 @@ Style cho các option còn lại
     color: #0066ff;
 }
 
+.view-all {
+    margin-top: 20px;
+}
+
 .view-all a {
     text-decoration: none;
     color: black;
@@ -391,15 +395,65 @@ Style cho các option còn lại
     border: 2px solid black;
 }
 
-.hightlight-stadium {
+.highlight-stadium {
     width: 100%;
-    height: 3000px;
-    background-color: red;
-}       
+    height: auto;
+    margin-top: 40px;
+    background-color: black;
+}
 
-.price-per-sqm {
+.highlight-text {
+    font-weight: bolder;
+    color: white;
+    font-size: 2.3rem;
+    margin-top: 15px;
+}
+
+.splide {
+    margin-top: 20px;  
+}
+
+.highlight-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+}
+
+.highlight-img:hover {
+    transform: scale(1.05);
+}
+
+.highlight-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 17px 20px 30px 20px;
+    color: #fff;
+    z-index: 2;
+}
+
+.highlight-title, .highlight-location {
+    color: #fff;
+    margin: 0;
+    padding: 7px;
+    text-shadow: 0 2px 8px rgba(17, 16, 16, 0.4);
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+ /* .price-per-sqm {
     font-size: 14px;
     color: #666;
+<<<<<<< HEAD
 }
 
 .view-all {
@@ -566,6 +620,10 @@ Style cho các option còn lại
     margin-right: 5px;
     gap: 10px;
 }
+=======
+} */
+
+>>>>>>> 22c8249120d3931649364d7cd529d9697e4a46b7
 
 
 
