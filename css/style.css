@@ -109,15 +109,18 @@ img::after {
 
 .container {
     width: 100%;
+    max-width: 1440px; /* Thêm max-width */
+    margin: 0 auto; /* Căn giữa container */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden; /* Ngăn scroll ngang */
 }
 
 .background-img {
-    width: 1900px;
+    width: 100%;  /* Thay đổi từ 1900px thành 100% */
     height: 700px;
 }
 
@@ -211,7 +214,8 @@ img::after {
     margin-right: 10px;
 }
 
- Style cho option đầu tiên (placeholder)
+
+/* Style cho option đầu tiên (placeholder) */
 .search-input select#stadiumType option:first-child,
 .search-input select#district option:first-child,
 .search-input select#ward option:first-child {
@@ -219,9 +223,9 @@ img::after {
     color: #fff;
     font-weight: bold;
     font-size: 1.2rem;
-} */
+} 
 
-Style cho các option còn lại
+/* Style cho các option còn lại */
 .search-input select#stadiumType option,
 .search-input select#district option,
 .search-input select#ward option {
@@ -232,10 +236,87 @@ Style cho các option còn lại
     font-weight: 400;
 }
 
-/* .page2 {
-    max-width: 1200px;
-    margin: 0 auto;
+
+.suggest {
+    width: 92%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.suggest-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.suggest-content {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+.suggest-item.active {
+    color: #065fd4;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #065fd4;
+}
+
+
+.suggest-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.suggest-item a {
+    text-decoration: none;
+    color: grey;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.suggest-item i {
+    font-size: 18px;
+}
+
+.suggest-item  p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.suggest-underline {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 100%;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1;
+}
+
+/* 
+.suggest-item-active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #065fd4;
 } */
+
+
+
+
+
+
+
+
 
 .stadium-listings {
     width: 92%;
@@ -263,15 +344,19 @@ Style cho các option còn lại
 }
 
 .sanbong {
-    background-color: white;
+    /* background-color: white; */
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
+    margin-top: 20px;
+    /* width: 100%;
+    height: 100%; */
+
 }
 
-.sanbong:hover {
+/* .sanbong:hover { */
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -280,22 +365,28 @@ Style cho các option còn lại
     position: relative;
     height: 180px;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(to right, #00f260, #0575e6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .sanbong-image img {
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 250px;
     object-fit: cover;
     border: 3px solid transparent;
     border-image: linear-gradient(to right, #00f260, #0575e6) 1;
 }
+.sanbong-image img:hover {
+    transform: scale(1.1);
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
 
 .booking-support {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #0066ff;
+
+    background-color: #00f260;
     color: white;
     padding: 6px 12px;
     border-radius: 4px;
@@ -309,10 +400,15 @@ Style cho các option còn lại
 .booking-support i {
     font-size: 12px;
 }
+.booking-support a {
+    text-decoration: none;
+    color: white;
+}
+
 
 .time-badge {
     position: absolute;
-    bottom: 10px;
+    bottom: 170px;
     left: 10px;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
@@ -320,12 +416,28 @@ Style cho các option còn lại
     border-radius: 4px;
     font-size: 12px;
 }
+.time-badge a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.view-count {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
 
 .favorite-btn {
     background-color: transparent;
     border: none;
     color: black;
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -334,6 +446,12 @@ Style cho các option còn lại
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+}
+.title-container a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .stadium-info {
@@ -356,6 +474,10 @@ Style cho các option còn lại
     color: #666;
     margin-bottom: 12px;
 }
+.stadium-location a {
+    text-decoration: none;
+    color: #666;
+}
 
 .stadium-details {
     display: flex;
@@ -370,6 +492,14 @@ Style cho các option còn lại
     align-items: center;
     gap: 5px;
 }
+.detail-item a {
+    text-decoration: none;
+    color: #444;
+}
+.phone-number a {
+    text-decoration: none;
+    color: #444;
+}
 
 .stadium-price {
     display: flex;
@@ -377,13 +507,12 @@ Style cho các option còn lại
     align-items: center;
     margin-top: 10px;
 }
-
-.price {
-    font-size: 18px;
-    font-weight: 700;
+.stadium-price a {
+    text-decoration: none;
     color: #0066ff;
+    font-size: 22px;
+    font-weight: bold;
 }
-
 .view-all {
     margin-top: 20px;
 }
@@ -450,21 +579,19 @@ Style cho các option còn lại
 }
 
 
- /* .price-per-sqm {
+.price-per-sqm {
     font-size: 14px;
     color: #666;
-<<<<<<< HEAD
 }
 
 .view-all {
     /* text-decoration: none; */
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.2rem;
     color: white;
     border: 2px solid black;
     /* padding: 20px 30px; */
     border-radius: 6px;
-    padding: 18px 40px;
+    padding: 15px 30px;
     text-align: center;
     /* margin-bottom: 20px; */
     background-color: rgb(9, 75, 244);
@@ -472,93 +599,202 @@ Style cho các option còn lại
     transition: background-color 0.3s ease;
     display: block;
     margin: 20px auto;
+    margin-top: 30px;
 }
 
- .view-all-btn:hover {
-    /* background-color: rgb(10, 10, 10); */
-    color: white;
+.view-all-btn:hover {
+    /* background-color: rgba(4, 10, 24, 0.1); */
+    color: rgba(9, 75, 244, 0.9);
     /* border: 2px solid white; */
     transform: scale(1.05);
     transition: transform 0.3s ease;
-    cursor: pointer; */
+    cursor: pointer;
 }   
 
 .news-feed {
-    width: 92%;
+    width: 100%;
     overflow: hidden;
     margin-top: 100px;
+    gap: 20px;
+
 }
 .new-feed-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
+
 }
 
-.all-news {
-    font-size: 1.5rem;
-    font-weight: bold;
+.tab-all-news {
+    font-size: 1.2rem;
+    /* font-weight: bold; */
     margin-bottom: 30px;
     width: 100%;
     height: 100%;
     position: relative;
+    
 }
-.all-news a {
+.tab-all-news a {
     color: blue;
     text-decoration: none;
 }
+.tab {
+    color: #1967d2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+  }
+  
+  .tab-active::after {
+    content: "";
+    /* display: block; */
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 4%;
+    height: 3px;
+    background: #1967d2;
+    border-radius: 2px;
+    z-index: 2;
+    /* margin-top: 20px; */
+  }
+  
+.tab-underline {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1;
+
+  }
+
+.news-container {
+    display: flex;
+    gap: 30px; 
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%; 
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+.news-item.featured {
+    width: 50%;
+    height: 50%;
+    /* background-color: white; */
+}
+
+.news-feed {
+    width: 92%;
+    height: 50%;
+    /* background-color: white; */
+}
+
+.news-feed .title {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.new-feed-title h2 {
+    font-size: 30px;
+    color: black;
+    margin: 0;
+    font-weight: 600;
+}
+
+.all-news a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
 
 .news-item {
+    /* background: #fff; */
+    border-radius: 8px;
+    overflow: hidden;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+
+
+/* Cột bên phải chứa 3 bài viết nhỏ */
+.news-column {
+    /* flex: 0 0 40%; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    /* height: 50%; */
+}
+
+
+.news-image {
+    position: relative;
+    overflow: hidden;
+
+    
+}
+
+.news-image img {
     width: 100%;
     height: 100%;
-    position: relative;
+    object-fit: cover;
 }
 
-.news-item-image {
-    width: 100%;
-    height: 100%;
-    position: relative;
+.news-image img:hover {
+    transform: scale(1.1);
+    transition: transform 500ms ease;
+    cursor: pointer;
 }
 
-.news-item-image-img {
-    width: 40%;
-    height: 50%;
-    position: relative;
-    border-radius: 10px;
-}
-.news-item-image-img:hover {
-    transform: scale(1.05);
-    transition: transform 0.4s ease;
+
+
+.news-content {
+    /* padding: 10px; */
+    margin-top: 5px;
 }
 
-.i286 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
+
+.news-content a {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
 }
 
-.i286 i {
-    font-size: 12px;
-    margin-right: 3px;
+.news-content p {
+    margin: 0 0 10px 0;
+    color: grey;
+    font-size: 18px;
+}
+.content1 {
+    margin-top: 5px;
+    font-size: 16px;
 }
 
-.i286 span {
-    font-size: 12px;
+.content1 a {
+    margin-top: 5px;
+    text-decoration: none;
+    color: grey;
 }
+
+
 
 .khac {
-    /* position: absolute; */
-    bottom: 10px;
-    right: 10px;
-    display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 18px;
-    margin-top: 5px;
+    justify-content: space-between;
+    display: flex;
+    /* width: 100%; */
+    /* padding: 5px 10px; */
 }
 
 .khac a {
@@ -567,63 +803,123 @@ Style cho các option còn lại
 }
 
 .khac span {
-    color:#666;
-}
-.khac button {
-    background-color: transparent;
-    border: none;
-    color: black;
-    font-size: 22px;
-    cursor: pointer;
-    margin-left: 440px;
-}
-.news-item-title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-.news-item-content {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #666;
-    width: 40%;
-    height: 100%;
-    position: relative;
-    margin-top: 10px;
+    color: grey;
 }
 
-.news-item-author {
+.phutdoc {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 15px;
 }
 
-.news-item-author-image {
-    width: 35px;
-    height: 35px;
+.avatar-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: grey;
+    margin-top: 10px;
+}
+.avatar-author a {
+    text-decoration: none;
+    color: grey;
+}
+.avatar-author img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid white;
-    box-shadow: 0 1 4px 0 rgba(0, 0, 0, 08);
-    display: inline-block;
-    vertical-align: middle;
+    
 }
 
-.news-item-author-name {
-    font-size: 16px;
-    color: #666;
-    margin-top: 5px;
+.noidung {
+    /* width: 50%; */
+}
+.bainho1 {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    /* z-index: 2; */
+    margin-left: auto;
+    margin-right: auto;
+    height: 30%;
+    width: 110%;
+    overflow: hidden;
+}
+.anhbainho1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.anhbainho1:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 500ms ease;
 }
 
-.news-item-author-name span {
-    margin-right: 5px;
+
+.noidungbainho1 {
+    width: 50%;
+    /* padding: 10px; */
+    /* gap: 5px; */
+}
+
+.tieudebainho a{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}
+.news-meta {
+    display: flex;
+    align-items: center;
     gap: 10px;
+    font-size: 16px;
+    color: grey;
 }
-=======
-} */
 
->>>>>>> 22c8249120d3931649364d7cd529d9697e4a46b7
+.anhbainho1 {
+    position: relative;
+    z-index: 1;
+    width: 40%;
+}
+
+.view-all-feed {
+    /* text-decoration: none; */
+    font-size: 1.2rem;
+    color: rgb(9, 75, 244);
+    border: 2px solid rgb(9, 75, 244);
+    /* padding: 20px 30px; */
+    border-radius: 6px;
+    padding: 15px 30px;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.view-all-feed:hover {
+    background-color: rgba(9, 75, 244, 0.1);
+    color: rgb(9, 75, 244);
+    /* border: 2px solid white; */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}   
+
+
+
+
+
+
+
+
 
 
 

@@ -53,3 +53,21 @@ districtSelect.addEventListener('change', function() {
         wardSelect.innerHTML = '<option value="" disabled selected>Chọn huyện</option>';
     }
 });
+
+let suggestItems = document.querySelectorAll('.suggest-item')
+
+for (let i = 0; i < suggestItems.length; i++) {
+    suggestItems[i].addEventListener('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        let activeItem = e.target.parentElement.parentElement
+        console.log(activeItem)
+        console.log(e)
+        for (let j = 0; j < suggestItems.length; j++) {
+            suggestItems[j].classList.remove('active');
+        }
+        activeItem.classList.add('active');
+    })
+}
+
+
