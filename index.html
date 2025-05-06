@@ -16,23 +16,34 @@
             <ul>
                 <div class="img-nav">
                     <li>
-                        <img class="logo" src="" alt="">
+                        <img class="logo" src="./img/logo-search-grid-2x.png" alt="logo navbar">
                     </li>
                 </div>
                 <div class="menu">
-                    <li><a href="">Trang chủ</a></li>
-                    <li><a href="">Liên hệ</a></li>
-                    <li><a href="">Ưu đãi</a></li>
-                    <li><a href="">Tuyển dụng</a></li>
+                    <div class="context">
+                        <li><a href="">Trang chủ</a></li>
+                    </div>
+                    <div class="context">
+                        <li><a href="">Liên hệ</a></li>
+                    </div>
+                    <div class="context">
+                        <li><a href="">Ưu đãi</a></li>
+                    </div>
+                    <div class="context">
+                        <li><a href="">Tuyển dụng</a></li>
+                    </div>
                 </div>
                 <div class="login">
-                    <li><a class="sign-in" href="">Đăng nhập</a>/<a class="sign-up" href="">Đăng ký</a></li>
+                    <li>
+                        <a class="sign-in" href="">Đăng nhập</a>
+                        /
+                        <a class="sign-up" href="">Đăng ký</a>
+                    </li>
                 </div>
             </ul>
             <div class="img-logoNav">
                 <img class="logoVN"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlGMiz-bTzI8v4n6o6fetDOKa-p6AteCN1A&s"
-                    alt="">
+                    src="./img/logoVN.jpg" alt="vietnamese flag">
             </div>
         </div>
     </nav>
@@ -588,8 +599,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.4/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.4/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (document.getElementById('highlight-splide')) {
@@ -598,9 +608,6 @@
                     perPage: 3,
                     focus: 'center',
                     drag: 'free',
-                    autoScroll: {
-                        speed: 1,
-                    },
                     gap: '1.5rem',
                     breakpoints: {
                         900: { perPage: 2 },

@@ -6,15 +6,13 @@
 
 body {
     background-color: azure;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: relative;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
     width: 100%;
-    height: 110px;
+    height: 120px;
     background-color: black;
-    margin-top: 0.2rem;
     color: white;
     position: fixed;
     top: 0;
@@ -36,23 +34,42 @@ nav ul {
 }
 
 .logo {
-    width: 100px;
-    height: 40px;
-    background-color: aliceblue;
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover;
 }
-.menu { 
-    font-size: 1.3rem;
+.menu {
     display: flex;
-    margin-left: 384px;
+    margin-left: 230px;
 }
 
 .menu li {
     padding: 12px 30px;
 }
-
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+.context {
+    width: 170px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.4s ease;
+    transition: background-color 0.4s ease;
+}
+.context:hover {
+    transform: scale(1.02);
+    background-color: #0906c5;
+}
 .login {
     font-size: 1.3rem;
-    margin-left: 210px;
+    margin-left: 230px;
     
 }
 .sign-in {
@@ -63,14 +80,10 @@ nav ul {
     color: white;
     text-decoration: none;
 }
-.menu li a {
-    text-decoration: none;
-    color: white;
-}
 
 .logoVN {
-    width: 170px;
-    height: 100px;
+    width: 120px;
+    height: 70px;
     border-radius: 5px;
     margin-left: 40px;
     overflow: hidden;
@@ -214,8 +227,7 @@ img::after {
     margin-right: 10px;
 }
 
-
-/* Style cho option đầu tiên (placeholder) */
+ /* Style cho option đầu tiên (placeholder)
 .search-input select#stadiumType option:first-child,
 .search-input select#district option:first-child,
 .search-input select#ward option:first-child {
@@ -223,7 +235,7 @@ img::after {
     color: #fff;
     font-weight: bold;
     font-size: 1.2rem;
-} 
+}  */
 
 /* Style cho các option còn lại */
 .search-input select#stadiumType option,
@@ -924,6 +936,41 @@ img::after {
 
 
 
+.lowType {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    font-size: 1.3rem;
+}
+.contact {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.bone-down {
+    margin: 10px 20px;
+    color: white;
+}
+.bone-down li {
+    list-style: none;
+    padding: 10px;
+}
+.img-down {
+    width: 240px;
+    height: 120px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.content {
+    text-decoration: none;
+    color: white;
+}
+
+.Leo {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
 
 
 
