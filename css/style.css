@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: azure;
+    background-color: rgba(255, 255, 255, 0.9);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -22,7 +22,7 @@ nav {
 
 .top {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -122,9 +122,9 @@ img::after {
 
 .container {
     width: 100%;
-    max-width: 1440px; /* Thêm max-width */
+    max-width: 1900px;
     margin: 0 auto; /* Căn giữa container */
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,8 +133,9 @@ img::after {
 }
 
 .background-img {
-    width: 100%;  /* Thay đổi từ 1900px thành 100% */
-    height: 700px;
+    width: 1900px;
+    max-width: 2000px;  /* Thay đổi từ 1900px thành 100% */
+    height: 740px;
 }
 
 .search {
@@ -368,7 +369,7 @@ img::after {
 
 }
 
-/* .sanbong:hover { */
+.sanbong:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -378,12 +379,12 @@ img::after {
     height: 180px;
     overflow: hidden;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #00f260, #0575e6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    background: linear-gradient(to right, #00f260, #0575e6); 
 }
 
 .sanbong-image img {
-    width: 350px;
+    width: 100%;
     height: 250px;
     object-fit: cover;
     border: 3px solid transparent;
@@ -397,7 +398,6 @@ img::after {
 
 .booking-support {
     position: absolute;
-
     background-color: #00f260;
     color: white;
     padding: 6px 12px;
@@ -416,7 +416,6 @@ img::after {
     text-decoration: none;
     color: white;
 }
-
 
 .time-badge {
     position: absolute;
@@ -539,7 +538,7 @@ img::after {
 .highlight-stadium {
     width: 100%;
     height: auto;
-    margin-top: 40px;
+    margin-top: 30px;
     background-color: black;
 }
 
@@ -547,7 +546,7 @@ img::after {
     font-weight: bolder;
     color: white;
     font-size: 2.3rem;
-    margin-top: 15px;
+    margin-left: 20px;
 }
 
 .splide {
@@ -925,68 +924,114 @@ img::after {
     cursor: pointer;
 }   
 
-
-
-
-
-
-
-
-
-
-
-
-.lowType {
-    width: 100%;
-    height: auto;
-    background-color: black;
-    font-size: 1.3rem;
-}
-.contact {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.bone-down {
-    margin: 10px 20px;
+.footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: white;
-}
-.bone-down li {
-    list-style: none;
-    padding: 10px;
-}
-.img-down {
-    width: 240px;
-    height: 120px;
-    object-fit: cover;
+    padding: 60px 0 20px;
+    margin-top: 80px;
+    position: relative;
     overflow: hidden;
 }
-.content {
-    text-decoration: none;
-    color: white;
+
+.container-footer {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+    gap: 40px;
+    padding: 0 20px;
+    position: relative;
 }
 
-.Leo {
+.section-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.logo-footer img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    filter: brightness(1.3);
+    overflow: hidden;
+    object-fit: cover;
+    padding-left: 20px;
+}
+
+.contact-footer p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    gap: 10px;
+    margin: 10px 0;
+}
+.contact-footer strong {
+    font-size: 1.2rem;
+}
+
+.title-footer {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
     margin-left: 10px;
-    font-size: 1.5rem;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.links {
+    list-style: none;
+}
+.links li {
+    margin-bottom: 20px;
+}
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.32rem;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.links a:hover {
+    transform: translateX(5px);
+}
+
+.social-link {
+    width: 100%;
+    max-width: 40px;
+    height: auto;
+    font-size: 2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+}
+.social-link i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
+.read-more {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.read-more p {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+    letter-spacing: 0.5px;
+}
