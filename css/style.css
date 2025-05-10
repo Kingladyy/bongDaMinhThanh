@@ -134,7 +134,7 @@ img::after {
 
 .background-img {
     width: 1900px;
-    max-width: 2000px;  /* Thay đổi từ 1900px thành 100% */
+    max-width: 2000px; 
     height: 740px;
 }
 
@@ -163,6 +163,7 @@ img::after {
     color: #666;
     font-size: 1.5rem;
     margin-bottom: 30px;
+    font-style: italic;
 }
 
 .search-input {
@@ -177,13 +178,17 @@ img::after {
     color: white;
     border: none;
     padding: 15px 40px;
+    min-width: 190px;
+    max-height: 180px;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .search-input button:hover {
-    background: #e31111e5;
+    background: #eb0606e5;
 }
 
 .search-input select {
@@ -211,7 +216,6 @@ img::after {
     box-shadow: 0 0 0 2px rgba(197, 19, 6, 0.1);
 }
 
-/* Style riêng cho select đầu tiên */
 .search-input select#stadiumType,
 .search-input select#district,
 .search-input select#ward {
@@ -228,17 +232,6 @@ img::after {
     margin-right: 10px;
 }
 
- /* Style cho option đầu tiên (placeholder)
-.search-input select#stadiumType option:first-child,
-.search-input select#district option:first-child,
-.search-input select#ward option:first-child {
-    background: #003366;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
-}  */
-
-/* Style cho các option còn lại */
 .search-input select#stadiumType option,
 .search-input select#district option,
 .search-input select#ward option {
@@ -248,7 +241,6 @@ img::after {
     padding: 14px 18px;
     font-weight: 400;
 }
-
 
 .suggest {
     width: 92%;
@@ -324,36 +316,11 @@ img::after {
 } */
 
 
-
-
-
-
-
-
-
 .stadium-listings {
     width: 92%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-}
-
-@media (max-width: 1200px) {
-    .stadium-listings {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .stadium-listings {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .stadium-listings {
-        grid-template-columns: 1fr;
-    }
 }
 
 .sanbong {
@@ -524,9 +491,38 @@ img::after {
     font-size: 22px;
     font-weight: bold;
 }
-.view-all {
+.view-all-btn1 {
     margin-top: 20px;
 }
+
+.view-all {
+    /* text-decoration: none; */
+    font-size: 1.2rem;
+    background-color: white;
+    border: 2px solid black;
+    /* padding: 20px 30px; */
+    border-radius: 6px;
+    padding: 15px 30px;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    /* background-color: rgb(9, 75, 244); */
+    color: rgb(9, 75, 244);
+    border: 2px solid rgb(9, 75, 244);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    margin-top: 20px;
+}
+.view-all:hover {
+    background-color: rgba(9, 75, 244, 0.1);
+    color: rgb(9, 75, 244);
+    /* border: 2px solid white; */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+  
 
 .view-all a {
     text-decoration: none;
@@ -538,15 +534,16 @@ img::after {
 .highlight-stadium {
     width: 100%;
     height: auto;
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 55px;
     background-color: black;
 }
 
 .highlight-text {
     font-weight: bolder;
     color: white;
-    font-size: 2.3rem;
-    margin-left: 20px;
+    font-size: 2.5rem;
+    margin-left: 40px;
 }
 
 .splide {
@@ -593,39 +590,12 @@ img::after {
 .price-per-sqm {
     font-size: 14px;
     color: #666;
-}
-
-.view-all {
-    /* text-decoration: none; */
-    font-size: 1.2rem;
-    color: white;
-    border: 2px solid black;
-    /* padding: 20px 30px; */
-    border-radius: 6px;
-    padding: 15px 30px;
-    text-align: center;
-    /* margin-bottom: 20px; */
-    background-color: rgb(9, 75, 244);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 20px auto;
-    margin-top: 30px;
-}
-
-.view-all-btn:hover {
-    /* background-color: rgba(4, 10, 24, 0.1); */
-    color: rgba(9, 75, 244, 0.9);
-    /* border: 2px solid white; */
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}   
+}  
 
 .news-feed {
     width: 100%;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 20px;
     gap: 20px;
 
 }
@@ -898,6 +868,10 @@ img::after {
     width: 40%;
 }
 
+.view-all-btn2 {
+    margin-top: 60px;
+}
+
 .view-all-feed {
     /* text-decoration: none; */
     font-size: 1.2rem;
@@ -907,12 +881,11 @@ img::after {
     border-radius: 6px;
     padding: 15px 30px;
     text-align: center;
-    /* margin-bottom: 20px; */
     background-color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .view-all-feed:hover {
@@ -925,7 +898,7 @@ img::after {
 }   
 
 .footer {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: linear-gradient(135deg, #121212 0%, #212121 100%);
     color: white;
     padding: 60px 0 20px;
     margin-top: 80px;
@@ -973,10 +946,10 @@ img::after {
 }
 
 .title-footer {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.2rem;
+    font-weight: bolder;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 17px;
     padding-bottom: 10px;
     position: relative;
 }
@@ -985,9 +958,9 @@ img::after {
     list-style: none;
 }
 .links li {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-.links a {
+.link-text  {
     color: white;
     text-decoration: none;
     font-size: 1.32rem;
@@ -995,32 +968,72 @@ img::after {
     position: relative;
     transition: all 0.3s ease;
 }
-.links a:hover {
+.link-text:hover {
     transform: translateX(5px);
 }
 
-.social-link {
-    width: 100%;
-    max-width: 40px;
-    height: auto;
-    font-size: 2rem;
-    border-radius: 8px;
+.logo-social {
+    display: flex;
+}
+
+.logo-social a {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 2.3rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0);
+    color: var(--color);
+
 }
-.social-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+.logo-social a:hover {
+    background: var(--color);
+    color: #050810;
+    box-shadow: 0 0 5px var(--color),
+    0 0 10px var(--color),
+    0 0 40px var(--color),
+    0 0 100px var(--color);
 }
-.social-link i {
+
+.newsletter h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
 }
 
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
 
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.newsletter-form button:hover {
+    background-color: #0056b3;
+}
 
 .read-more {
     text-align: center;
@@ -1034,4 +1047,22 @@ img::after {
     font-size: 1.2rem;
     color: #b3b3b3;
     letter-spacing: 0.5px;
+}
+
+@media (max-width: 1200px) {
+    .stadium-listings {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .stadium-listings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stadium-listings {
+        grid-template-columns: 1fr;
+    }
 }
