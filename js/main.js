@@ -70,4 +70,54 @@ for (let i = 0; i < suggestItems.length; i++) {
     })
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.getElementById('my-splide')) {
+    new Splide('#my-splide', {
+      type: 'slide',
+      perPage: 4,
+      gap: '24px',
+      arrows: true,
+      pagination: false,
+      breakpoints: {
+        900: { perPage: 2 },
+        600: { perPage: 1 }
+      }
+    }).mount();
+  }
+});
 
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.getElementById('partner-splide')) {
+    new Splide('#partner-splide', {
+      type: 'slide',
+      perPage: 4,
+      gap: '24px',
+      arrows: true,
+      pagination: false,
+      breakpoints: {
+        900: { perPage: 2 },
+        600: { perPage: 1 }
+      }
+    }).mount();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const more = document.getElementById('about-more');
+    const link = document.getElementById('about-more-link');
+    let expanded = false;
+  
+    more.classList.remove('show');
+  
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      expanded = !expanded;
+      if (expanded) {
+        more.classList.add('show');
+        link.innerHTML = 'Thu gọn <span style="font-size:1.1em;">&#9650;</span>';
+      } else {
+        more.classList.remove('show');
+        link.innerHTML = 'Xem thêm <span style="font-size:1.1em;">&#9660;</span>';
+      }
+    });
+  });
