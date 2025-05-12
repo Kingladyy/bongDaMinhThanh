@@ -11,7 +11,7 @@ body {
 
 nav {
     width: 100%;
-    height: 120px;
+    height: 110px;
     background-color: black;
     color: white;
     position: fixed;
@@ -26,8 +26,28 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0 20px;
 }
-nav ul {
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+nav li {
     list-style: none;
     display: flex;
     align-items: center;
@@ -39,46 +59,63 @@ nav ul {
     overflow: hidden;
     object-fit: cover;
 }
+
 .menu {
     display: flex;
-    margin-left: 230px;
+    margin-left: 180px;
 }
 
 .menu li {
     padding: 12px 30px;
 }
+
 .menu li a {
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
+    position: relative;
 }
+
 .context {
-    width: 170px;
+    width: auto;
     height: auto;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: transform 0.4s ease;
-    transition: background-color 0.4s ease;
+    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
+
 .context:hover {
     transform: scale(1.02);
-    background-color: #0906c5;
+    background-color: rgba(31, 31, 228, 0.901);
 }
+
 .login {
     font-size: 1.3rem;
-    margin-left: 230px;
-    
+    margin-left: 140px;
 }
-.sign-in {
+
+.sign-in, .sign-up {
     color: white;
     text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.sign-up {
-    color: white;
-    text-decoration: none;
+
+.sign-in:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.sign-up:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .logoVN {
@@ -946,19 +983,20 @@ img::after {
 }
 
 .title-footer {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: bolder;
     margin-bottom: 10px;
     margin-left: 17px;
     padding-bottom: 10px;
     position: relative;
+    color: #fff;
 }
 
 .links {
     list-style: none;
 }
 .links li {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 .link-text  {
     color: white;
@@ -977,8 +1015,8 @@ img::after {
 }
 
 .logo-social a {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     margin: 0 10px;
     box-sizing: border-box;
     background: #fff;
@@ -989,7 +1027,7 @@ img::after {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.4s;
     background: rgba(0, 0, 0, 0);
     color: var(--color);
 
@@ -997,10 +1035,10 @@ img::after {
 .logo-social a:hover {
     background: var(--color);
     color: #050810;
-    box-shadow: 0 0 5px var(--color),
+    box-shadow: 0 0 2px var(--color),
+    0 0 6px var(--color),
     0 0 10px var(--color),
-    0 0 40px var(--color),
-    0 0 100px var(--color);
+    0 0 30px var(--color);
 }
 
 .newsletter h4 {
@@ -1011,23 +1049,31 @@ img::after {
 .newsletter-form {
     display: flex;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .newsletter-form input {
+    width: 320px;
+    height: 50px;
     flex: 1;
     padding: 10px;
     border: 1px solid #333;
     border-radius: 4px;
     background-color: #2a2a2a;
     color: #ffffff;
+    font-size: 1.1rem;
+    font-style: italic;
 }
 
 .newsletter-form button {
+    width: 130px;
+    height: auto;
     padding: 10px 20px;
     background-color: #007bff;
     color: #ffffff;
     border: none;
     border-radius: 4px;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -1049,7 +1095,7 @@ img::after {
     letter-spacing: 0.5px;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .stadium-listings {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1064,5 +1110,172 @@ img::after {
 @media (max-width: 600px) {
     .stadium-listings {
         grid-template-columns: 1fr;
+    }
+} */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav {
+        height: 60px;
+    }
+    .top {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: 30px;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+    .img-nav {
+        display: none !important;
+    }
+    .img-logoNav {
+        display: none !important;
+    }
+    .logo {
+        display: none !important;
+    }
+    .menu {
+        position: absolute;
+        top: 60px;
+        left: -70vw;
+        width: 57vw;
+        height: calc(100vh - 200px);
+        background: #111;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 30px 20px;
+        transition: left 0.3s;
+        z-index: 1000;
+        display: none;
+        border-radius: 0 0 5px 0;
+        box-shadow: 2px 4px 15px rgba(0,0,0,0.15);
+    }
+    .menu.active {
+        left: -50vw;
+        display: flex;
+    }
+    .context {
+        width: 100%;
+        padding: 15px 0;
+        border-radius: 0;
+    }
+
+    .menu li {
+        padding: 0 0 20px 0;
+    }
+    .menu li a {
+        font-size: 1.2rem;
+    }
+    .login {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        display: flex;
+        align-items: center;
+        z-index: 1002;
+        background: none;
+        font-size: 1.1rem;
+    }
+    .login li {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 50px;
+    }
+    .sign-in, .sign-up {
+        padding: 0 8px;
+        font-size: 1.1rem;
+        background: none;
+        border: none;
+        color: #fff;
+        border-radius: 0;
+    }
+    .sign-in:hover, .sign-up:hover {
+        background: rgba(255,255,255,0.08);
+    }
+    .container, .container-footer {
+        padding: 0 4px;
+    }
+    .background-img {
+        height: 120px;
+        min-height: 80px;
+    }
+    .search {
+        padding: 18px 6px;
+        margin: -40px auto 18px auto;
+    }
+    .search h1 {
+        font-size: 1.2rem;
+    }
+    .search-input select, .search-input button {
+        font-size: 0.95rem;
+        padding: 8px 8px;
+    }
+    .stadium-listings, .news-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .highlight-stadium {
+        margin: 8px 0;
+        padding: 8px 0 10px 0;
+    }
+    .highlight-text {
+        font-size: 1.1rem;
+        margin-left: 12px;
+        margin-bottom: 8px;
+    }
+    .footer {
+        padding: 24px 0 8px 0;
+    }
+    .container-footer {
+        gap: 12px;
+    }
+    .logo-footer img {
+        width: 100px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        height: 70px;
+    }
+    .logo {
+        width: 120px;
+        height: 40px;
+    }
+    .menu {
+        margin-left: 20px;
+    }
+    .menu li {
+        padding: 8px 10px;
+    }
+    .menu li a {
+        font-size: 1rem;
+    }
+    .context {
+        width: 90px;
+    }
+    .login {
+        margin-left: 20px;
+        font-size: 1rem;
+    }
+    .img-logoNav {
+        display: none !important;
     }
 }

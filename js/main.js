@@ -70,4 +70,28 @@ for (let i = 0; i < suggestItems.length; i++) {
     })
 }
 
+// Hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+// Also ignore clicks on .login
+const loginBox = document.querySelector('.login');
+document.addEventListener('click', (e) => {
+    if (
+        !hamburger.contains(e.target) &&
+        !navMenu.contains(e.target) &&
+        !loginBox.contains(e.target)
+    ) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
+});
+
 

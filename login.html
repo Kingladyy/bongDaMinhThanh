@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <form action="#">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Tên đăng nhập" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Mật khẩu" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="btn">Đăng nhập</button>
+                <p>Đăng nhập qua các nền tảng khác</p>
+                <div class="social-icons">
+                    <a href="#" style="--color: #DB4437"><i class='bx bxl-google'></i></a>
+                    <a href="#" style="--color: #4267B2"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#" style="--color: #E1306C"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" style="--color: #0077B5"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="">
+                <h1>Đăng ký</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Email" required>
+                    <i class='bx bx-envelope' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Tên đăng ký" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Mật khẩu" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="btn">Đăng ký</button>
+                <p>Đăng ký qua các nền tảng khác</p>
+                <div class="social-icons">
+                    <a href="#" style="--color: #DB4437"><i class='bx bxl-google'></i></a>
+                    <a href="#" style="--color: #4267B2"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#" style="--color: #E1306C"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" style="--color: #0077B5"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-pannel toggle-left">
+                <h1>Hello, Welcome!</h1>
+                <p>Bạn chưa có tài khoản?</p>
+                <button class="btn register-btn">Đăng ký</button>
+            </div>
+            <div class="toggle-pannel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Bạn đã có tài khoản?</p>
+                <button class="btn login-btn">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>
