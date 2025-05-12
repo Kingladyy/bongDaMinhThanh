@@ -70,28 +70,69 @@ for (let i = 0; i < suggestItems.length; i++) {
     })
 }
 
-// Hamburger menu functionality
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.menu');
-
-hamburger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.getElementById('my-splide')) {
+    new Splide('#my-splide', {
+      type: 'slide',
+      perPage: 4,
+      gap: '24px',
+      arrows: true,
+      pagination: false,
+      breakpoints: {
+        900: { perPage: 2 },
+        600: { perPage: 1 }
+      }
+    }).mount();
+  }
 });
 
-// Close menu when clicking outside
-// Also ignore clicks on .login
-const loginBox = document.querySelector('.login');
-document.addEventListener('click', (e) => {
-    if (
-        !hamburger.contains(e.target) &&
-        !navMenu.contains(e.target) &&
-        !loginBox.contains(e.target)
-    ) {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.getElementById('partner-splide')) {
+    new Splide('#partner-splide', {
+      type: 'slide',
+      perPage: 4,
+      gap: '24px',
+      arrows: true,
+      pagination: false,
+      breakpoints: {
+        900: { perPage: 2 },
+        600: { perPage: 1 }
+      }
+    }).mount();
+  }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const more = document.getElementById('about-more');
+    const link = document.getElementById('about-more-link');
+    let expanded = false;
+  
+    more.classList.remove('show');
+  
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      expanded = !expanded;
+      if (expanded) {
+        more.classList.add('show');
+        link.innerHTML = 'Thu gọn <span style="font-size:1.1em;">&#9650;</span>';
+      } else {
+        more.classList.remove('show');
+        link.innerHTML = 'Xem thêm <span style="font-size:1.1em;">&#9660;</span>';
+      }
+    });
+  });
 
+let lastScroll = 0;
+const navBar = document.querySelector('nav');
+
+window.addEventListener('scroll', function() {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  if (currentScroll > lastScroll && currentScroll > 60) {
+    // Kéo xuống
+    navBar.classList.add('hide');
+  } else {
+    // Kéo lên
+    navBar.classList.remove('hide');
+  }
+  lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+});
